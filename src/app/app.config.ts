@@ -6,7 +6,7 @@ import { provideHttpClient }      from '@angular/common/http';
 import { HttpClient }             from '@angular/common/http';
 import { ApplicationConfig }      from '@angular/core';
 import { importProvidersFrom }    from '@angular/core';
-import { BrowserModule }          from '@angular/platform-browser';
+import { BrowserModule, withEventReplay }          from '@angular/platform-browser';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations }      from '@angular/platform-browser/animations';
 import { provideRouter }          from '@angular/router';
@@ -33,8 +33,7 @@ export function createTranslateLoader(http : HttpClient)
 }
 
 export const appConfig : ApplicationConfig = {
-  providers : [
-
+  providers : [ 
     // Routing
     provideRouter(
       routes,
@@ -78,7 +77,8 @@ export const appConfig : ApplicationConfig = {
     // Resolvers
 
     provideHttpClient(withFetch(), withInterceptorsFromDi()),
-    provideAnimations(),
-    provideClientHydration(),
+    provideAnimations(), 
+     // SSR 
+     provideClientHydration(withEventReplay()),
   ]
 };
