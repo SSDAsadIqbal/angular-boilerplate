@@ -14,8 +14,8 @@ import { RouterLink }          from '@angular/router';
 import { TranslateModule }     from '@ngx-translate/core';
 
 // Services
-import { AppService }          from '@services/app.service';
-import { StoreService }        from '@services/store.service';
+import { AppService }          from '@services/app.service'; 
+import { StoreService } from '@services/store.service';
 
 @Component({
   selector    : 'app-forgot-password',

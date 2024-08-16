@@ -20,11 +20,11 @@ import { StorageHelper }            from '@helpers/storage.helper';
 
 // Enums
 import { Endpoint }                 from '@enums/endpoint.enum';
+import { StoreService } from './store.service';
 
 // Models
 
-// Services
-import { StoreService }             from './store.service';
+// Services 
 
 @Injectable()
 export class AppService

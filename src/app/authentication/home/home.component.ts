@@ -3,12 +3,12 @@ import { NgIf }                 from '@angular/common';
 import { Component }            from '@angular/core';
 import { OnInit }               from '@angular/core';
 
-// Services
-import { StoreService }         from '@services/store.service';
+// Services 
 
 // Components
 import { ProgressBarComponent } from '@blocks/progress-bar/progress-bar.component';
 import { PageLayoutComponent }  from '@layouts/page-layout/page-layout.component';
+import { StoreService } from '@services/store.service';
 
 @Component({
   selector    : 'app-home',

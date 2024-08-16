@@ -4,11 +4,11 @@ import { Component }        from '@angular/core';
 import { OnInit }           from '@angular/core';
 import { RouterOutlet }     from '@angular/router';
 
-// Services
-import { StoreService }     from '@services/store.service';
+// Services 
 
 // Components
 import { ToastComponent }   from '@blocks/toast/toast.component';
+import { StoreService } from '@services/store.service';
 
 @Component({
   selector    : 'app-root',
